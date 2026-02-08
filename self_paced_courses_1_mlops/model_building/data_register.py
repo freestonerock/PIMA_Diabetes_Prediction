@@ -1,6 +1,6 @@
 from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 from huggingface_hub import HfApi, create_repo
-from google.colab import userdata
+#from google.colab import userdata
 import os
 
 
@@ -8,8 +8,8 @@ repo_id = "bxpradhan/PIMA-Diabetes-Prediction"                         # enter t
 repo_type = "dataset"
 
 # Initialize API client
-#api = HfApi(token=os.getenv("HF_TOKEN"))
-api = HfApi(token=userdata.get('HF_Token'))
+api = HfApi(token=os.getenv("HF_TOKEN"))
+#api = HfApi(token=userdata.get('HF_Token'))
 
 # Step 1: Check if the space exists
 try:
